@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LanguageSelectionViewController.h
 //  YaTranslate
 //
 //  Created by Nikita Makarov on 08/10/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LanguageSelectionViewController : UITableViewController
 
 @end
-
