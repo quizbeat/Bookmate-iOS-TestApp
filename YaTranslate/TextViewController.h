@@ -6,8 +6,10 @@
 //  Copyright © 2015 Nikita Makarov. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface TextViewController : ViewController
+@interface TextViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end

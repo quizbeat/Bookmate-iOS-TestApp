@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="h0r-g0-wTC">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="j38-Rh-hOV">
+            <objects>
+                <navigationController id="h0r-g0-wTC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Up-8a-Jzr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NX9-YN-u76"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q1u-xu-Rtg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1236" y="-459"/>
+        </scene>
+        <!--YaTranslate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TextViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +33,188 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECL-n3-32y">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <mutableString key="text">My father's family name being Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit than Pip. So, I called myself Pip, and came to be called Pip.
+I give Pirrip as my father's family name, on the authority of his tombstone and my sister,—Mrs. Joe Gargery, who married the blacksmith. As I never saw my father or my mother, and never saw any likeness of either of them (for their days were long before the days of photographs), my first fancies regarding what they were like were unreasonably derived from their tombstones. The shape of the letters on my father's, gave me an odd idea that he was a square, stout, dark man, with curly black hair. From the character and turn of the inscription, "Also Georgiana Wife of the Above," I drew a childish conclusion that my mother was freckled and sickly. To five little stone lozenges, each about a foot and a half long, which were arranged in a neat row beside their grave, and were sacred to the memory of five little brothers of mine,—who gave up trying to get a living, exceedingly early in that universal struggle,—I am indebted for a belief I religiously entertained that they had all been born on their backs with their hands in their trousers-pockets, and had never taken them out in this state of existence.
+Ours was the marsh country, down by the river, within, as the river wound, twenty miles of the sea. My first most vivid and broad impression of the identity of things seems to me to have been gained on a memorable raw afternoon towards evening. At such a time I found out for certain that this bleak place overgrown with nettles was the churchyard; and that Philip Pirrip, late of this parish, and also Georgiana wife of the above, were dead and buried; and that Alexander, Bartholomew, Abraham, Tobias, and Roger, infant children of the aforesaid, were also dead and buried; and that the dark flat wilderness beyond the churchyard, intersected with dikes and mounds and gates, with scattered cattle feeding on it, was the marshes; and that the low leaden line beyond was the river; and that the distant savage lair from which the wind was rushing was the sea; and that the small bundle of shivers growing afraid of it all and beginning to cry, was Pip.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ECL-n3-32y" secondAttribute="trailing" constant="-20" id="4eY-jo-jnF"/>
+                            <constraint firstItem="ECL-n3-32y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="5WV-WG-7L9"/>
+                            <constraint firstItem="ECL-n3-32y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="GbH-M3-AWD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ECL-n3-32y" secondAttribute="bottom" id="wGN-8c-94O"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="YaTranslate" id="w3X-2P-mIp">
+                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="vRC-iA-uk6"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="ECL-n3-32y" id="wWy-b7-2iD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-447" y="-459"/>
+        </scene>
+        <!--Translate View Controller-->
+        <scene sceneID="IFG-sA-VB6">
+            <objects>
+                <viewController storyboardIdentifier="TranslationScreen" id="ib7-Cs-Gbk" customClass="TranslateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KrC-gi-pj9"/>
+                        <viewControllerLayoutGuide type="bottom" id="HXy-5D-Buh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3J4-ta-BWh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fDg-PJ-IfM">
+                                <rect key="frame" x="20" y="74" width="560" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="xuJ-kE-W14"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translated text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVL-cI-dkg">
+                                <rect key="frame" x="20" y="179" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="Mhj-VH-3nK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Mhj-VH-3nK"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipL-XO-dsu">
+                                <rect key="frame" x="20" y="45" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="xTh-XN-K2e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="xTh-XN-K2e"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hp4-CT-Swy">
+                                <rect key="frame" x="284" y="20" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="pta-gX-Zi4"/>
+                                    <constraint firstAttribute="width" constant="32" id="xy8-d8-fSp"/>
+                                </constraints>
+                                <state key="normal" title="&lt; &gt;"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjP-Zb-DYG">
+                                <rect key="frame" x="20" y="21" width="256" height="30"/>
+                                <state key="normal" title="From"/>
+                                <connections>
+                                    <action selector="selectLanguageButtonPressed:" destination="ib7-Cs-Gbk" eventType="touchUpInside" id="lfn-Vo-lce"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xri-V8-REy">
+                                <rect key="frame" x="324" y="21" width="256" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9xx-A9-iJF"/>
+                                </constraints>
+                                <state key="normal" title="To"/>
+                                <connections>
+                                    <action selector="selectLanguageButtonPressed:" destination="ib7-Cs-Gbk" eventType="touchUpInside" id="khe-kx-qUE"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ina-6X-z3U">
+                                <rect key="frame" x="20" y="208" width="560" height="392"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="MWX-XU-SaL"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="MWX-XU-SaL"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xri-V8-REy" firstAttribute="leading" secondItem="hp4-CT-Swy" secondAttribute="trailing" constant="8" id="1vV-qn-RTs"/>
+                            <constraint firstItem="fDg-PJ-IfM" firstAttribute="leading" secondItem="3J4-ta-BWh" secondAttribute="leadingMargin" id="5x7-5F-0qX"/>
+                            <constraint firstItem="ina-6X-z3U" firstAttribute="trailing" secondItem="3J4-ta-BWh" secondAttribute="trailingMargin" id="9Lp-CY-gEt"/>
+                            <constraint firstItem="GjP-Zb-DYG" firstAttribute="centerY" secondItem="hp4-CT-Swy" secondAttribute="centerY" id="9pe-Va-evk"/>
+                            <constraint firstItem="ipL-XO-dsu" firstAttribute="leading" secondItem="3J4-ta-BWh" secondAttribute="leadingMargin" id="9ua-QF-Hd1"/>
+                            <constraint firstItem="GjP-Zb-DYG" firstAttribute="leading" secondItem="3J4-ta-BWh" secondAttribute="leadingMargin" id="FMl-jJ-PvM"/>
+                            <constraint firstItem="Xri-V8-REy" firstAttribute="centerY" secondItem="hp4-CT-Swy" secondAttribute="centerY" id="FwI-Gp-NSc"/>
+                            <constraint firstItem="ipL-XO-dsu" firstAttribute="trailing" secondItem="3J4-ta-BWh" secondAttribute="trailingMargin" id="LbC-no-5yL"/>
+                            <constraint firstItem="hp4-CT-Swy" firstAttribute="centerX" secondItem="3J4-ta-BWh" secondAttribute="centerX" id="S2H-Ux-Z7X"/>
+                            <constraint firstItem="HXy-5D-Buh" firstAttribute="top" secondItem="ina-6X-z3U" secondAttribute="bottom" id="TWJ-ga-TgH"/>
+                            <constraint firstItem="hp4-CT-Swy" firstAttribute="top" secondItem="KrC-gi-pj9" secondAttribute="bottom" id="Xej-dZ-HnI"/>
+                            <constraint firstItem="TVL-cI-dkg" firstAttribute="top" secondItem="fDg-PJ-IfM" secondAttribute="bottom" constant="25" id="Y8l-EQ-wfQ"/>
+                            <constraint firstItem="ina-6X-z3U" firstAttribute="top" secondItem="TVL-cI-dkg" secondAttribute="bottom" constant="8" id="c3H-Ff-gDn"/>
+                            <constraint firstItem="Xri-V8-REy" firstAttribute="trailing" secondItem="3J4-ta-BWh" secondAttribute="trailingMargin" id="cK7-fc-FHz"/>
+                            <constraint firstItem="fDg-PJ-IfM" firstAttribute="top" secondItem="ipL-XO-dsu" secondAttribute="bottom" constant="8" id="fhE-pn-N2Z"/>
+                            <constraint firstItem="TVL-cI-dkg" firstAttribute="trailing" secondItem="3J4-ta-BWh" secondAttribute="trailingMargin" id="hYF-nb-g0W"/>
+                            <constraint firstItem="TVL-cI-dkg" firstAttribute="leading" secondItem="3J4-ta-BWh" secondAttribute="leadingMargin" id="msr-ZL-Bfe"/>
+                            <constraint firstItem="ina-6X-z3U" firstAttribute="leading" secondItem="3J4-ta-BWh" secondAttribute="leadingMargin" id="nTf-kd-teM"/>
+                            <constraint firstItem="fDg-PJ-IfM" firstAttribute="trailing" secondItem="3J4-ta-BWh" secondAttribute="trailingMargin" id="nZX-Ty-lZw"/>
+                            <constraint firstItem="ipL-XO-dsu" firstAttribute="top" secondItem="KrC-gi-pj9" secondAttribute="bottom" constant="25" id="rYk-Vb-eGM"/>
+                            <constraint firstItem="hp4-CT-Swy" firstAttribute="leading" secondItem="GjP-Zb-DYG" secondAttribute="trailing" constant="8" id="sgd-Xo-31W"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="arrowButton" destination="hp4-CT-Swy" id="gTg-yw-df4"/>
+                        <outlet property="fromLangButton" destination="GjP-Zb-DYG" id="mrw-Lc-uw4"/>
+                        <outlet property="originalTextView" destination="fDg-PJ-IfM" id="eNj-Vo-XAG"/>
+                        <outlet property="toLangButton" destination="Xri-V8-REy" id="aqC-m2-iip"/>
+                        <outlet property="translatedTextView" destination="ina-6X-z3U" id="HMI-yr-YRh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VBx-Xb-3zi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="392" y="-459"/>
+        </scene>
+        <!--Language Selection View Controller-->
+        <scene sceneID="HPX-uq-elT">
+            <objects>
+                <tableViewController storyboardIdentifier="LanguageSelectionScreen" id="1zb-XB-t4n" customClass="LanguageSelectionViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="hdd-49-lFG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LanguageCell" id="SAr-lr-qLG">
+                                <rect key="frame" x="0.0" y="50" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SAr-lr-qLG" id="FMj-Kl-eGA">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1zb-XB-t4n" id="b7Y-ox-6Yj"/>
+                            <outlet property="delegate" destination="1zb-XB-t4n" id="PNV-wK-MHu"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dis-Jh-PsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1219" y="-459"/>
         </scene>
     </scenes>
 </document>
