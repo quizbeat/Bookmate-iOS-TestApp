@@ -39,11 +39,6 @@ static const NSString *kRussianText = @"Russian";
     [super didReceiveMemoryWarning];
 }
 
-- (void)dealloc
-{
-    NSLog(@"textSelection deallocated");
-}
-
 #pragma mark - Actions
 
 - (IBAction)doneButtonPressed:(UIBarButtonItem *)sender

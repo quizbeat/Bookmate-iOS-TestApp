@@ -101,7 +101,7 @@ static NSString *defaultToLanguage = @"Русский";
                                               [self.activityIndicator stopAnimating];
                                               [[UIApplication sharedApplication] endIgnoringInteractionEvents];
                                           } onFailure:^(NSError *error, NSInteger statusCode) {
-                                              self.translatedTextView.text = @"Error";
+                                              self.translatedTextView.text = [NSString stringWithFormat:@"Error %ld: %@", (long)statusCode, error];
                                               [self.activityIndicator stopAnimating];
                                               [[UIApplication sharedApplication] endIgnoringInteractionEvents];
                                           }];

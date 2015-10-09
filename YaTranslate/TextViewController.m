@@ -25,15 +25,16 @@
     [super viewDidLoad];
     
     // setup text view settings
-    NSLog(@"%@", NSStringFromCGRect(self.textView.frame));
     self.textView.textContainerInset = UIEdgeInsetsMake(0, 8, 0, 8);
     self.textView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, 2);
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self.textView scrollRangeToVisible:NSMakeRange(0, 1)]; // scroll text to begin
 
+    
     // setup menu controller
     UIMenuItem *translateItem = [[UIMenuItem alloc] initWithTitle:@"Translate" action:@selector(showTranslateView)];
     [[UIMenuController sharedMenuController] setMenuItems:@[translateItem]];
+    
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         // load manager and properties
@@ -79,10 +80,8 @@
 
 - (void)setNewText:(NSString *)text
 {
-    NSLog(@"setNewText");
     if (text.length > 0) {
         [self.textView setText:text];
-        NSLog(@"success");
     }
 }
 

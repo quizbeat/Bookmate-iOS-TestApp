@@ -202,7 +202,7 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ina-6X-z3U">
-                                <rect key="frame" x="20" y="208" width="560" height="392"/>
+                                <rect key="frame" x="20" y="208" width="560" height="384"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="MWX-XU-SaL"/>
                                 </constraints>
@@ -227,7 +227,7 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                             <constraint firstItem="Xri-V8-REy" firstAttribute="centerY" secondItem="hp4-CT-Swy" secondAttribute="centerY" id="FwI-Gp-NSc"/>
                             <constraint firstItem="ipL-XO-dsu" firstAttribute="trailing" secondItem="3J4-ta-BWh" secondAttribute="trailingMargin" id="LbC-no-5yL"/>
                             <constraint firstItem="hp4-CT-Swy" firstAttribute="centerX" secondItem="3J4-ta-BWh" secondAttribute="centerX" id="S2H-Ux-Z7X"/>
-                            <constraint firstItem="HXy-5D-Buh" firstAttribute="top" secondItem="ina-6X-z3U" secondAttribute="bottom" id="TWJ-ga-TgH"/>
+                            <constraint firstItem="HXy-5D-Buh" firstAttribute="top" secondItem="ina-6X-z3U" secondAttribute="bottom" constant="8" id="TWJ-ga-TgH"/>
                             <constraint firstItem="hp4-CT-Swy" firstAttribute="top" secondItem="KrC-gi-pj9" secondAttribute="bottom" id="Xej-dZ-HnI"/>
                             <constraint firstItem="TVL-cI-dkg" firstAttribute="top" secondItem="fDg-PJ-IfM" secondAttribute="bottom" constant="25" id="Y8l-EQ-wfQ"/>
                             <constraint firstItem="ina-6X-z3U" firstAttribute="top" secondItem="TVL-cI-dkg" secondAttribute="bottom" constant="8" id="c3H-Ff-gDn"/>

@@ -63,7 +63,7 @@ static const NSString *APIkey = @"trnsl.1.1.20150930T074032Z.cb21f79f9c2cb0c6.29
                                  @"lang": lang};
     
     NSLog(@"Begin translating...");
-    NSLog(@"Text length: %d", text.length);
+    NSLog(@"Text length: %lu", (unsigned long)text.length);
     NSLog(@"Lang: %@\n", lang);
     
     [self.requestOperationManager GET:@"translate"
@@ -99,7 +99,7 @@ static const NSString *APIkey = @"trnsl.1.1.20150930T074032Z.cb21f79f9c2cb0c6.29
                                   NSLog(@"Supported languages downloaded.\n");
                               }
                               failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-                                  NSLog(@"Error %d: %@", operation.response.statusCode, error);
+                                  NSLog(@"Error %ld: %@", operation.response.statusCode, error);
                               }];
 }
 

@@ -30,9 +30,7 @@
         return [lang1 compare:lang2];
     }];
     
-    self.languages = languages;
-    
-    NSLog(@"LanguageSelectionViewController didLoad");
+    self.languages = languages;    
 }
 
 - (void)didReceiveMemoryWarning
