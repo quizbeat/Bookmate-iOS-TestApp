@@ -31,7 +31,8 @@ static NSString *autoDetectLanguage = @"Авто";
     self.originalTextView.layer.borderColor = [[[UIColor blueColor] colorWithAlphaComponent:0.5] CGColor];
     self.originalTextView.layer.cornerRadius = 5;
     self.originalTextView.clipsToBounds = YES;
-    // self.originalTextView.textContainerInset = UIEdgeInsetsMake(0, 2, 0, 2);
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.translatedTextView.layer.borderWidth = 2.0;
     self.translatedTextView.layer.borderColor = [[[UIColor blueColor] colorWithAlphaComponent:0.5] CGColor];
@@ -41,6 +42,7 @@ static NSString *autoDetectLanguage = @"Авто";
     // init buttons
     [self.fromLangButton setTitle:@"Авто" forState:UIControlStateNormal];
     [self.toLangButton setTitle:@"Русский" forState:UIControlStateNormal];
+    self.arrowButton.userInteractionEnabled = NO;
     
     // init activity indicator
     self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -52,11 +54,10 @@ static NSString *autoDetectLanguage = @"Авто";
 {
     [super viewWillAppear:animated];
     // setup original text
-    self.originalTextView.text = self.originalText;
+    [self.originalTextView setText:self.originalText];
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     [self.activityIndicator startAnimating];
     [self translateText];
-    //NSLog(@"viewWillAppear");
 }
 
 - (void)didReceiveMemoryWarning

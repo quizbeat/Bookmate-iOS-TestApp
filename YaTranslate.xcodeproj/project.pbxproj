@@ -34,6 +34,7 @@
 		6C1F458E1BC664EB006E548B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C1F458C1BC664EB006E548B /* LaunchScreen.storyboard */; };
 		6C1F45971BC66F0D006E548B /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F45961BC66F0D006E548B /* TextViewController.m */; settings = {ASSET_TAGS = (); }; };
 		6C1F459D1BC6777D006E548B /* TranslateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F459C1BC6777D006E548B /* TranslateViewController.m */; settings = {ASSET_TAGS = (); }; };
+		6C9743A91BC72BEF002B1BCA /* TextSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9743A81BC72BEF002B1BCA /* TextSelectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,8 @@
 		6C1F45961BC66F0D006E548B /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
 		6C1F459B1BC6777D006E548B /* TranslateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslateViewController.h; sourceTree = "<group>"; };
 		6C1F459C1BC6777D006E548B /* TranslateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslateViewController.m; sourceTree = "<group>"; };
+		6C9743A71BC72BEF002B1BCA /* TextSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextSelectionViewController.h; sourceTree = "<group>"; };
+		6C9743A81BC72BEF002B1BCA /* TextSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextSelectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +201,8 @@
 				6C1F45821BC664EB006E548B /* AppDelegate.m */,
 				6C1F45951BC66F0D006E548B /* TextViewController.h */,
 				6C1F45961BC66F0D006E548B /* TextViewController.m */,
+				6C9743A71BC72BEF002B1BCA /* TextSelectionViewController.h */,
+				6C9743A81BC72BEF002B1BCA /* TextSelectionViewController.m */,
 				6C1F459B1BC6777D006E548B /* TranslateViewController.h */,
 				6C1F459C1BC6777D006E548B /* TranslateViewController.m */,
 				6C1846CA1BC6C6B000C7AF5D /* LanguageSelectionViewController.h */,
@@ -295,6 +300,7 @@
 			files = (
 				6C1846C21BC6A2A600C7AF5D /* UIProgressView+AFNetworking.m in Sources */,
 				6C1846C01BC6A2A600C7AF5D /* UIButton+AFNetworking.m in Sources */,
+				6C9743A91BC72BEF002B1BCA /* TextSelectionViewController.m in Sources */,
 				6C1846C31BC6A2A600C7AF5D /* UIRefreshControl+AFNetworking.m in Sources */,
 				6C1846BF1BC6A2A600C7AF5D /* UIAlertView+AFNetworking.m in Sources */,
 				6C1F459D1BC6777D006E548B /* TranslateViewController.m in Sources */,

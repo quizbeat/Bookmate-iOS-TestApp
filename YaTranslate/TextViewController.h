@@ -12,4 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
+- (IBAction)selectTextButtonPressed:(UIBarButtonItem *)sender;
+
 @end

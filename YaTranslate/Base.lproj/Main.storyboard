@@ -10,6 +10,7 @@
         <scene sceneID="j38-Rh-hOV">
             <objects>
                 <navigationController id="h0r-g0-wTC" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Up-8a-Jzr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -21,6 +22,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1u-xu-Rtg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1236" y="-459"/>
+        </scene>
+        <!--Select text-->
+        <scene sceneID="P8C-YL-dNH">
+            <objects>
+                <tableViewController id="xkI-dR-jGD" customClass="TextSelectionViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ox8-S3-zkO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextCell" textLabel="b9E-zF-AcE" style="IBUITableViewCellStyleDefault" id="XXz-gN-1ZO">
+                                <rect key="frame" x="0.0" y="114" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XXz-gN-1ZO" id="gXU-Ky-EO2">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b9E-zF-AcE">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xkI-dR-jGD" id="zSg-SU-98g"/>
+                            <outlet property="delegate" destination="xkI-dR-jGD" id="evj-6X-cG9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select text" id="bWf-4H-sE1">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="AeP-FQ-0dR">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="xkI-dR-jGD" id="ezt-OL-7cO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YgU-zG-Avy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373" y="-1240"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FqN-Nh-z6h">
+            <objects>
+                <navigationController storyboardIdentifier="TextSelectionScreen" id="tiq-qQ-aaw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aGs-nZ-JqD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xkI-dR-jGD" kind="relationship" relationship="rootViewController" id="oj7-vb-gTb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qUJ-r7-WKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447" y="-1240"/>
         </scene>
         <!--YaTranslate-->
         <scene sceneID="tne-QT-ifu">
@@ -36,9 +97,9 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECL-n3-32y">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <mutableString key="text">My father's family name being Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit than Pip. So, I called myself Pip, and came to be called Pip.
+                                <string key="text">My father's family name being Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit than Pip. So, I called myself Pip, and came to be called Pip.
 I give Pirrip as my father's family name, on the authority of his tombstone and my sister,—Mrs. Joe Gargery, who married the blacksmith. As I never saw my father or my mother, and never saw any likeness of either of them (for their days were long before the days of photographs), my first fancies regarding what they were like were unreasonably derived from their tombstones. The shape of the letters on my father's, gave me an odd idea that he was a square, stout, dark man, with curly black hair. From the character and turn of the inscription, "Also Georgiana Wife of the Above," I drew a childish conclusion that my mother was freckled and sickly. To five little stone lozenges, each about a foot and a half long, which were arranged in a neat row beside their grave, and were sacred to the memory of five little brothers of mine,—who gave up trying to get a living, exceedingly early in that universal struggle,—I am indebted for a belief I religiously entertained that they had all been born on their backs with their hands in their trousers-pockets, and had never taken them out in this state of existence.
-Ours was the marsh country, down by the river, within, as the river wound, twenty miles of the sea. My first most vivid and broad impression of the identity of things seems to me to have been gained on a memorable raw afternoon towards evening. At such a time I found out for certain that this bleak place overgrown with nettles was the churchyard; and that Philip Pirrip, late of this parish, and also Georgiana wife of the above, were dead and buried; and that Alexander, Bartholomew, Abraham, Tobias, and Roger, infant children of the aforesaid, were also dead and buried; and that the dark flat wilderness beyond the churchyard, intersected with dikes and mounds and gates, with scattered cattle feeding on it, was the marshes; and that the low leaden line beyond was the river; and that the distant savage lair from which the wind was rushing was the sea; and that the small bundle of shivers growing afraid of it all and beginning to cry, was Pip.</mutableString>
+Ours was the marsh country, down by the river, within, as the river wound, twenty miles of the sea. My first most vivid and broad impression of the identity of things seems to me to have been gained on a memorable raw afternoon towards evening. At such a time I found out for certain that this bleak place overgrown with nettles was the churchyard; and that Philip Pirrip, late of this parish, and also Georgiana wife of the above, were dead and buried; and that Alexander, Bartholomew, Abraham, Tobias, and Roger, infant children of the aforesaid, were also dead and buried; and that the dark flat wilderness beyond the churchyard, intersected with dikes and mounds and gates, with scattered cattle feeding on it, was the marshes; and that the low leaden line beyond was the river; and that the distant savage lair from which the wind was rushing was the sea; and that the small bundle of shivers growing afraid of it all and beginning to cry, was Pip.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -52,7 +113,11 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="YaTranslate" id="w3X-2P-mIp">
-                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="vRC-iA-uk6"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="vRC-iA-uk6">
+                            <connections>
+                                <action selector="selectTextButtonPressed:" destination="BYZ-38-t0r" id="jdg-N5-iZ4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="textView" destination="ECL-n3-32y" id="wWy-b7-2iD"/>
@@ -79,7 +144,7 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="xuJ-kE-W14"/>
                                 </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -117,7 +182,7 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                                     <constraint firstAttribute="height" constant="32" id="pta-gX-Zi4"/>
                                     <constraint firstAttribute="width" constant="32" id="xy8-d8-fSp"/>
                                 </constraints>
-                                <state key="normal" title="&lt; &gt;"/>
+                                <state key="normal" title="&gt;"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjP-Zb-DYG">
                                 <rect key="frame" x="20" y="21" width="256" height="30"/>
@@ -186,7 +251,7 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VBx-Xb-3zi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="392" y="-459"/>
+            <point key="canvasLocation" x="373" y="-459"/>
         </scene>
         <!--Language Selection View Controller-->
         <scene sceneID="HPX-uq-elT">
@@ -214,7 +279,7 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dis-Jh-PsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1219" y="-459"/>
+            <point key="canvasLocation" x="1183" y="-459"/>
         </scene>
     </scenes>
 </document>

@@ -7,10 +7,11 @@
 //
 
 #import "TextViewController.h"
+#import "TextSelectionViewController.h"
 #import "TranslateViewController.h"
 #import "YandexAPIManager.h"
 
-@interface TextViewController ()
+@interface TextViewController () <TextSelectionDelegate>
 
 @property (strong, nonatomic) TranslateViewController *translateView;
 
@@ -26,14 +27,14 @@
     NSLog(@"%@", NSStringFromCGRect(self.textView.frame));
     self.textView.textContainerInset = UIEdgeInsetsMake(0, 8, 0, 8);
     self.textView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, 2);
-    [self.textView scrollRangeToVisible:NSMakeRange(0, 1)]; // scroll text to begin ??
-    
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self.textView scrollRangeToVisible:NSMakeRange(0, 1)]; // scroll text to begin
+
     // setup menu controller
     UIMenuItem *translateItem = [[UIMenuItem alloc] initWithTitle:@"Translate" action:@selector(showTranslateView)];
     [[UIMenuController sharedMenuController] setMenuItems:@[translateItem]];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         // load manager and properties
         [YandexAPIManager sharedManager];
     });
@@ -56,8 +57,30 @@
     [self.navigationController pushViewController:self.translateView animated:YES];
 }
 
-- (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
-    //NSLog(@"canPerformAction");
+
+- (IBAction)selectTextButtonPressed:(UIBarButtonItem *)sender
+{
+    //TextSelectionViewController *textSelectionView = [self.storyboard instantiateViewControllerWithIdentifier:@"TextSelectionScreen"];
+    UINavigationController *textSelectionNavigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"TextSelectionScreen"];
+    TextSelectionViewController *textSelectionView = textSelectionNavigationController.viewControllers.firstObject;
+    textSelectionView.delegate = self;
+    textSelectionView.modalPresentationStyle = UIModalPresentationPopover;
+    [self presentViewController:textSelectionNavigationController animated:YES completion:nil];
+}
+
+#pragma mark - TextSelectionDelegate
+
+- (void)setNewText:(NSString *)text
+{
+    NSLog(@"setNewText");
+    if (text.length > 0) {
+        [self.textView setText:text];
+        NSLog(@"success");
+    }
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
     if (action == @selector(showTranslateView)) {
         return YES;
     }
@@ -68,6 +91,5 @@
 {
     [super didReceiveMemoryWarning];
 }
-
 
 @end

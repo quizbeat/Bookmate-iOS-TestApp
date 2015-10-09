@@ -106,8 +106,6 @@ static const NSString *APIkey = @"trnsl.1.1.20150930T074032Z.cb21f79f9c2cb0c6.29
 - (NSArray *)supportedLanguages
 {
 #pragma mark - FIXME: self.languages is nil, if loading languages not ended
-    //NSArray *allLangs = [self.languages allValues];
-    //NSLog(@"%@", allLangs);
     return [self.languages allValues];
 }
 
