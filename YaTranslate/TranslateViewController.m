@@ -30,6 +30,7 @@ static NSString *defaultToLanguage = @"Русский";
     // fix for empty space in UITextView
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    
     // setup text views frames
     self.originalTextView.layer.borderWidth = 2.0;
     self.originalTextView.layer.borderColor = [[UIColor grayColor] CGColor];
@@ -41,10 +42,21 @@ static NSString *defaultToLanguage = @"Русский";
     self.translatedTextView.layer.cornerRadius = 5;
     self.translatedTextView.clipsToBounds = YES;
     
+    
     // init buttons
     [self.fromLangButton setTitle:defaultFromLanguage forState:UIControlStateNormal];
     [self.toLangButton setTitle:defaultToLanguage forState:UIControlStateNormal];
+    
+    self.fromLangButton.titleLabel.numberOfLines = 1;
+    self.fromLangButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+    self.fromLangButton.titleLabel.lineBreakMode = NSLineBreakByClipping;
+    
+    self.toLangButton.titleLabel.numberOfLines = 1;
+    self.toLangButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+    self.toLangButton.titleLabel.lineBreakMode = NSLineBreakByClipping;
+    
     self.arrowButton.userInteractionEnabled = NO;
+    
     
     // init activity indicator
     self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
