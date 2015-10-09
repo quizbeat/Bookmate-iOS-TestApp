@@ -140,7 +140,7 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fDg-PJ-IfM">
-                                <rect key="frame" x="20" y="74" width="560" height="80"/>
+                                <rect key="frame" x="20" y="84" width="560" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="xuJ-kE-W14"/>
                                 </constraints>
@@ -149,7 +149,7 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translated text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVL-cI-dkg">
-                                <rect key="frame" x="20" y="179" width="560" height="21"/>
+                                <rect key="frame" x="20" y="184" width="560" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="Mhj-VH-3nK"/>
                                 </constraints>
@@ -163,7 +163,7 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipL-XO-dsu">
-                                <rect key="frame" x="20" y="45" width="560" height="21"/>
+                                <rect key="frame" x="20" y="55" width="560" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="69" id="xTh-XN-K2e"/>
                                 </constraints>
@@ -177,24 +177,28 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hp4-CT-Swy">
-                                <rect key="frame" x="284" y="20" width="32" height="32"/>
+                                <rect key="frame" x="284" y="22" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="pta-gX-Zi4"/>
                                     <constraint firstAttribute="width" constant="32" id="xy8-d8-fSp"/>
                                 </constraints>
                                 <state key="normal" title="&gt;"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjP-Zb-DYG">
-                                <rect key="frame" x="20" y="21" width="256" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjP-Zb-DYG">
+                                <rect key="frame" x="156" y="23" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="aoG-TE-S5Z"/>
+                                </constraints>
                                 <state key="normal" title="From"/>
                                 <connections>
                                     <action selector="selectLanguageButtonPressed:" destination="ib7-Cs-Gbk" eventType="touchUpInside" id="lfn-Vo-lce"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xri-V8-REy">
-                                <rect key="frame" x="324" y="21" width="256" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xri-V8-REy">
+                                <rect key="frame" x="324" y="23" width="120" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9xx-A9-iJF"/>
+                                    <constraint firstAttribute="width" constant="120" id="xPj-2H-T43"/>
                                 </constraints>
                                 <state key="normal" title="To"/>
                                 <connections>
@@ -202,7 +206,7 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ina-6X-z3U">
-                                <rect key="frame" x="20" y="208" width="560" height="384"/>
+                                <rect key="frame" x="20" y="213" width="560" height="379"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="MWX-XU-SaL"/>
                                 </constraints>
@@ -228,8 +232,8 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                             <constraint firstItem="ipL-XO-dsu" firstAttribute="trailing" secondItem="3J4-ta-BWh" secondAttribute="trailingMargin" id="LbC-no-5yL"/>
                             <constraint firstItem="hp4-CT-Swy" firstAttribute="centerX" secondItem="3J4-ta-BWh" secondAttribute="centerX" id="S2H-Ux-Z7X"/>
                             <constraint firstItem="HXy-5D-Buh" firstAttribute="top" secondItem="ina-6X-z3U" secondAttribute="bottom" constant="8" id="TWJ-ga-TgH"/>
-                            <constraint firstItem="hp4-CT-Swy" firstAttribute="top" secondItem="KrC-gi-pj9" secondAttribute="bottom" id="Xej-dZ-HnI"/>
-                            <constraint firstItem="TVL-cI-dkg" firstAttribute="top" secondItem="fDg-PJ-IfM" secondAttribute="bottom" constant="25" id="Y8l-EQ-wfQ"/>
+                            <constraint firstItem="hp4-CT-Swy" firstAttribute="top" secondItem="KrC-gi-pj9" secondAttribute="bottom" constant="2" id="Xej-dZ-HnI"/>
+                            <constraint firstItem="TVL-cI-dkg" firstAttribute="top" secondItem="fDg-PJ-IfM" secondAttribute="bottom" constant="20" id="Y8l-EQ-wfQ"/>
                             <constraint firstItem="ina-6X-z3U" firstAttribute="top" secondItem="TVL-cI-dkg" secondAttribute="bottom" constant="8" id="c3H-Ff-gDn"/>
                             <constraint firstItem="Xri-V8-REy" firstAttribute="trailing" secondItem="3J4-ta-BWh" secondAttribute="trailingMargin" id="cK7-fc-FHz"/>
                             <constraint firstItem="fDg-PJ-IfM" firstAttribute="top" secondItem="ipL-XO-dsu" secondAttribute="bottom" constant="8" id="fhE-pn-N2Z"/>
@@ -237,9 +241,15 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                             <constraint firstItem="TVL-cI-dkg" firstAttribute="leading" secondItem="3J4-ta-BWh" secondAttribute="leadingMargin" id="msr-ZL-Bfe"/>
                             <constraint firstItem="ina-6X-z3U" firstAttribute="leading" secondItem="3J4-ta-BWh" secondAttribute="leadingMargin" id="nTf-kd-teM"/>
                             <constraint firstItem="fDg-PJ-IfM" firstAttribute="trailing" secondItem="3J4-ta-BWh" secondAttribute="trailingMargin" id="nZX-Ty-lZw"/>
-                            <constraint firstItem="ipL-XO-dsu" firstAttribute="top" secondItem="KrC-gi-pj9" secondAttribute="bottom" constant="25" id="rYk-Vb-eGM"/>
+                            <constraint firstItem="ipL-XO-dsu" firstAttribute="top" secondItem="KrC-gi-pj9" secondAttribute="bottom" constant="35" id="rYk-Vb-eGM"/>
                             <constraint firstItem="hp4-CT-Swy" firstAttribute="leading" secondItem="GjP-Zb-DYG" secondAttribute="trailing" constant="8" id="sgd-Xo-31W"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FMl-jJ-PvM"/>
+                                <exclude reference="cK7-fc-FHz"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="arrowButton" destination="hp4-CT-Swy" id="gTg-yw-df4"/>

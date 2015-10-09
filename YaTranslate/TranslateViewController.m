@@ -47,10 +47,16 @@ static NSString *defaultToLanguage = @"Русский";
     [self.fromLangButton setTitle:defaultFromLanguage forState:UIControlStateNormal];
     [self.toLangButton setTitle:defaultToLanguage forState:UIControlStateNormal];
     
+    self.fromLangButton.layer.borderWidth = 1.0;
+    self.fromLangButton.layer.borderColor = [self.fromLangButton.tintColor CGColor];
+    self.fromLangButton.layer.cornerRadius = 5;
     self.fromLangButton.titleLabel.numberOfLines = 1;
     self.fromLangButton.titleLabel.adjustsFontSizeToFitWidth = YES;
     self.fromLangButton.titleLabel.lineBreakMode = NSLineBreakByClipping;
     
+    self.toLangButton.layer.borderWidth = 1.0;
+    self.toLangButton.layer.borderColor = [self.toLangButton.tintColor CGColor];
+    self.toLangButton.layer.cornerRadius = 5;
     self.toLangButton.titleLabel.numberOfLines = 1;
     self.toLangButton.titleLabel.adjustsFontSizeToFitWidth = YES;
     self.toLangButton.titleLabel.lineBreakMode = NSLineBreakByClipping;
@@ -79,6 +85,10 @@ static NSString *defaultToLanguage = @"Русский";
     [super viewWillAppear:animated];
     // setup original text
     [self.originalTextView setText:self.originalText];
+    
+    [self.originalTextView scrollRangeToVisible:NSMakeRange(0, 1)]; // scroll text to top
+    [self.translatedTextView scrollRangeToVisible:NSMakeRange(0, 1)];
+    
     [self translateText];
 }
 

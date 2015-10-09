@@ -24,7 +24,6 @@
 		6C1846C21BC6A2A600C7AF5D /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1846AF1BC6A2A600C7AF5D /* UIProgressView+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
 		6C1846C31BC6A2A600C7AF5D /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1846B11BC6A2A600C7AF5D /* UIRefreshControl+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
 		6C1846C41BC6A2A600C7AF5D /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1846B31BC6A2A600C7AF5D /* UIWebView+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		6C1846C91BC6BD7700C7AF5D /* LeftRightArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C1846C81BC6BD7700C7AF5D /* LeftRightArrow.png */; settings = {ASSET_TAGS = (); }; };
 		6C1846CC1BC6C6B000C7AF5D /* LanguageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1846CB1BC6C6B000C7AF5D /* LanguageSelectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		6C1846CF1BC6C73B00C7AF5D /* YandexAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1846CE1BC6C73B00C7AF5D /* YandexAPIManager.m */; settings = {ASSET_TAGS = (); }; };
 		6C1F45801BC664EB006E548B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F457F1BC664EB006E548B /* main.m */; };
@@ -75,7 +74,6 @@
 		6C1846B11BC6A2A600C7AF5D /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		6C1846B21BC6A2A600C7AF5D /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		6C1846B31BC6A2A600C7AF5D /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		6C1846C81BC6BD7700C7AF5D /* LeftRightArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeftRightArrow.png; sourceTree = "<group>"; };
 		6C1846CA1BC6C6B000C7AF5D /* LanguageSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageSelectionViewController.h; sourceTree = "<group>"; };
 		6C1846CB1BC6C6B000C7AF5D /* LanguageSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageSelectionViewController.m; sourceTree = "<group>"; };
 		6C1846CD1BC6C73B00C7AF5D /* YandexAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YandexAPIManager.h; sourceTree = "<group>"; };
@@ -167,15 +165,6 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
-		6C1846C51BC6B77400C7AF5D /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				6C1846C81BC6BD7700C7AF5D /* LeftRightArrow.png */,
-			);
-			name = Images;
-			path = AFNetworking/Images;
-			sourceTree = "<group>";
-		};
 		6C1F45721BC664EB006E548B = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +184,6 @@
 		6C1F457D1BC664EB006E548B /* YaTranslate */ = {
 			isa = PBXGroup;
 			children = (
-				6C1846C51BC6B77400C7AF5D /* Images */,
 				6C18468C1BC6A2A600C7AF5D /* AFNetworking */,
 				6C1F45811BC664EB006E548B /* AppDelegate.h */,
 				6C1F45821BC664EB006E548B /* AppDelegate.m */,
@@ -285,7 +273,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C1F458E1BC664EB006E548B /* LaunchScreen.storyboard in Resources */,
-				6C1846C91BC6BD7700C7AF5D /* LeftRightArrow.png in Resources */,
 				6C1F458B1BC664EB006E548B /* Assets.xcassets in Resources */,
 				6C1F45891BC664EB006E548B /* Main.storyboard in Resources */,
 			);

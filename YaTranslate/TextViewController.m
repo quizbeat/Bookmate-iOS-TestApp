@@ -28,7 +28,7 @@
     self.textView.textContainerInset = UIEdgeInsetsMake(0, 8, 0, 8);
     self.textView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, 2);
     self.automaticallyAdjustsScrollViewInsets = NO;
-    [self.textView scrollRangeToVisible:NSMakeRange(0, 1)]; // scroll text to begin
+    [self.textView scrollRangeToVisible:NSMakeRange(0, 1)]; // scroll text to top
 
     
     // setup menu controller
