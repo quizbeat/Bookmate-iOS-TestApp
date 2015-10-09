@@ -10,8 +10,9 @@
 #import "LanguageSelectionViewController.h"
 #import "YandexAPIManager.h"
 
-static NSString *defaultToLanguage = @"Русский";
 static NSString *autoDetectLanguage = @"Авто";
+static NSString *defaultFromLanguage = @"Авто";
+static NSString *defaultToLanguage = @"Русский";
 
 @interface TranslateViewController () <LanguageSelectionDelegate>
 
@@ -26,27 +27,38 @@ static NSString *autoDetectLanguage = @"Авто";
 {
     [super viewDidLoad];
     
+    // fix for empty space in UITextView
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     // setup text views frames
     self.originalTextView.layer.borderWidth = 2.0;
-    self.originalTextView.layer.borderColor = [[[UIColor blueColor] colorWithAlphaComponent:0.5] CGColor];
+    self.originalTextView.layer.borderColor = [[UIColor grayColor] CGColor];
     self.originalTextView.layer.cornerRadius = 5;
     self.originalTextView.clipsToBounds = YES;
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    
     self.translatedTextView.layer.borderWidth = 2.0;
-    self.translatedTextView.layer.borderColor = [[[UIColor blueColor] colorWithAlphaComponent:0.5] CGColor];
+    self.translatedTextView.layer.borderColor = [[UIColor grayColor] CGColor];
     self.translatedTextView.layer.cornerRadius = 5;
     self.translatedTextView.clipsToBounds = YES;
     
     // init buttons
-    [self.fromLangButton setTitle:@"Авто" forState:UIControlStateNormal];
-    [self.toLangButton setTitle:@"Русский" forState:UIControlStateNormal];
+    [self.fromLangButton setTitle:defaultFromLanguage forState:UIControlStateNormal];
+    [self.toLangButton setTitle:defaultToLanguage forState:UIControlStateNormal];
     self.arrowButton.userInteractionEnabled = NO;
     
     // init activity indicator
-    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    
+    self.activityIndicator.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
+                                              UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+    
+    self.activityIndicator.frame = CGRectMake(0, 0, 70, 70);
     self.activityIndicator.center = self.view.center;
+    
+    self.activityIndicator.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+    self.activityIndicator.layer.cornerRadius = 10;
+    self.activityIndicator.clipsToBounds = YES;
+    
     [self.view addSubview:self.activityIndicator];
 }
 
@@ -55,8 +67,6 @@ static NSString *autoDetectLanguage = @"Авто";
     [super viewWillAppear:animated];
     // setup original text
     [self.originalTextView setText:self.originalText];
-    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    [self.activityIndicator startAnimating];
     [self translateText];
 }
 
@@ -69,6 +79,8 @@ static NSString *autoDetectLanguage = @"Авто";
 
 - (void)translateText
 {
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    [self.activityIndicator startAnimating];
     [[YandexAPIManager sharedManager] translateText:self.originalTextView.text
                                        fromLanguage:self.fromLangButton.currentTitle
                                          toLanguage:self.toLangButton.currentTitle

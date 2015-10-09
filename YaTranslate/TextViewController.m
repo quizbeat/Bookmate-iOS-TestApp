@@ -14,6 +14,7 @@
 @interface TextViewController () <TextSelectionDelegate>
 
 @property (strong, nonatomic) TranslateViewController *translateView;
+@property (strong, nonatomic) UINavigationController *textSelectionNavigationController;
 
 @end
 
@@ -40,6 +41,11 @@
     });
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
+
 #pragma mark - Actions
 
 - (void)showTranslateView
@@ -60,12 +66,13 @@
 
 - (IBAction)selectTextButtonPressed:(UIBarButtonItem *)sender
 {
-    //TextSelectionViewController *textSelectionView = [self.storyboard instantiateViewControllerWithIdentifier:@"TextSelectionScreen"];
-    UINavigationController *textSelectionNavigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"TextSelectionScreen"];
-    TextSelectionViewController *textSelectionView = textSelectionNavigationController.viewControllers.firstObject;
-    textSelectionView.delegate = self;
-    textSelectionView.modalPresentationStyle = UIModalPresentationPopover;
-    [self presentViewController:textSelectionNavigationController animated:YES completion:nil];
+    if (!self.textSelectionNavigationController) {
+        self.textSelectionNavigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"TextSelectionScreen"];
+        TextSelectionViewController *textSelectionView = self.textSelectionNavigationController.viewControllers.firstObject;
+        textSelectionView.delegate = self;
+        textSelectionView.modalPresentationStyle = UIModalPresentationPopover;
+    }
+    [self presentViewController:self.textSelectionNavigationController animated:YES completion:nil];
 }
 
 #pragma mark - TextSelectionDelegate
@@ -77,19 +84,6 @@
         [self.textView setText:text];
         NSLog(@"success");
     }
-}
-
-- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
-{
-    if (action == @selector(showTranslateView)) {
-        return YES;
-    }
-    return NO;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
 }
 
 @end

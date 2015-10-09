@@ -12,7 +12,6 @@
 @interface LanguageSelectionViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSArray *languages;
-@property (weak, nonatomic) UITableViewCell *selectedCell;
 
 @end
 
@@ -69,15 +68,9 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    self.selectedCell.accessoryType = UITableViewCellAccessoryNone;
-    
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
     
     [self.delegate updateLanguageTo:cell.textLabel.text forSender:self.sender];
-    self.selectedCell = cell;
-    
-    //[self dismissViewControllerAnimated:YES completion:nil];
     
     [self.navigationController popViewControllerAnimated:YES];
 }

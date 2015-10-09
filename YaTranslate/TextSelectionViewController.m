@@ -39,6 +39,11 @@ static const NSString *kRussianText = @"Russian";
     [super didReceiveMemoryWarning];
 }
 
+- (void)dealloc
+{
+    NSLog(@"textSelection deallocated");
+}
+
 #pragma mark - Actions
 
 - (IBAction)doneButtonPressed:(UIBarButtonItem *)sender
@@ -74,6 +79,11 @@ static const NSString *kRussianText = @"Russian";
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    
+    if (cell == self.selectedCell) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    
     cell.textLabel.text = [textsKeys objectAtIndex:indexPath.row];
     
     return cell;
