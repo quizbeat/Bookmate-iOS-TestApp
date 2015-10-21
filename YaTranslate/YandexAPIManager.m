@@ -9,7 +9,7 @@
 #import "YandexAPIManager.h"
 #import "AFNetworking.h"
 
-static const NSString *APIkey = @"trnsl.1.1.20150930T074032Z.cb21f79f9c2cb0c6.290b8003dc75a4edce017c8a5baa8103fb2471c5";
+static NSString * const APIkey = @"trnsl.1.1.20150930T074032Z.cb21f79f9c2cb0c6.290b8003dc75a4edce017c8a5baa8103fb2471c5";
 
 @interface YandexAPIManager ()
 

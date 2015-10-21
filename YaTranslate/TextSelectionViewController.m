@@ -8,11 +8,11 @@
 
 #import "TextSelectionViewController.h"
 
-static const NSString *kChineseText = @"Chinese";
-static const NSString *kEnglishText = @"English";
-static const NSString *kFrenchText = @"French";
-static const NSString *kGermanText = @"German";
-static const NSString *kRussianText = @"Russian";
+static NSString * const kChineseText = @"Chinese";
+static NSString * const kEnglishText = @"English";
+static NSString * const kFrenchText = @"French";
+static NSString * const kGermanText = @"German";
+static NSString * const kRussianText = @"Russian";
 
 @interface TextSelectionViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -73,7 +73,8 @@ static const NSString *kRussianText = @"Russian";
         textsKeys = [self.texts allKeys];
     }
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
     if (cell == self.selectedCell) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
