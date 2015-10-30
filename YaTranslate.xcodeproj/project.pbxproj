@@ -35,8 +35,8 @@
 		6C1F459D1BC6777D006E548B /* TranslateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F459C1BC6777D006E548B /* TranslateViewController.m */; };
 		6C3CA5311BE3BB4500731738 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3CA5301BE3BB4500731738 /* Reachability.m */; };
 		6C60E5C11BDF8C6800540A61 /* UIAlertController+ErrorAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C60E5C01BDF8C6800540A61 /* UIAlertController+ErrorAlert.m */; };
-		6C60E5C41BDFA75500540A61 /* YLetterLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C60E5C31BDFA75500540A61 /* YLetterLogo.png */; };
-		6C60E5C61BDFA80B00540A61 /* BrownGradientBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C60E5C51BDFA80B00540A61 /* BrownGradientBackground.png */; };
+		6C662F511BE3EB0000510B98 /* BrownGradientBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C662F4F1BE3EB0000510B98 /* BrownGradientBackground.png */; };
+		6C662F521BE3EB0000510B98 /* YLetterLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C662F501BE3EB0000510B98 /* YLetterLogo.png */; };
 		6C8FAF7D1BDECC5B000A21F7 /* Great Expectations.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C8FAF7A1BDECC5B000A21F7 /* Great Expectations.txt */; };
 		6C8FAF7E1BDECC5B000A21F7 /* Le Petit Prince.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C8FAF7B1BDECC5B000A21F7 /* Le Petit Prince.txt */; };
 		6C8FAF7F1BDECC5B000A21F7 /* Prindsessen Paa Ærten.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C8FAF7C1BDECC5B000A21F7 /* Prindsessen Paa Ærten.txt */; };
@@ -103,8 +103,8 @@
 		6C3CA5301BE3BB4500731738 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		6C60E5BF1BDF8C6800540A61 /* UIAlertController+ErrorAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+ErrorAlert.h"; sourceTree = "<group>"; };
 		6C60E5C01BDF8C6800540A61 /* UIAlertController+ErrorAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+ErrorAlert.m"; sourceTree = "<group>"; };
-		6C60E5C31BDFA75500540A61 /* YLetterLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YLetterLogo.png; sourceTree = "<group>"; };
-		6C60E5C51BDFA80B00540A61 /* BrownGradientBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BrownGradientBackground.png; sourceTree = "<group>"; };
+		6C662F4F1BE3EB0000510B98 /* BrownGradientBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BrownGradientBackground.png; sourceTree = "<group>"; };
+		6C662F501BE3EB0000510B98 /* YLetterLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YLetterLogo.png; sourceTree = "<group>"; };
 		6C8FAF7A1BDECC5B000A21F7 /* Great Expectations.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Great Expectations.txt"; sourceTree = "<group>"; };
 		6C8FAF7B1BDECC5B000A21F7 /* Le Petit Prince.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Le Petit Prince.txt"; sourceTree = "<group>"; };
 		6C8FAF7C1BDECC5B000A21F7 /* Prindsessen Paa Ærten.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Prindsessen Paa Ærten.txt"; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 		6C1F457D1BC664EB006E548B /* YaTranslate */ = {
 			isa = PBXGroup;
 			children = (
-				6C60E5C21BDFA74200540A61 /* Images */,
+				6C662F4E1BE3EB0000510B98 /* Images */,
 				6C8FAF791BDECC5B000A21F7 /* Texts */,
 				6C382D081BDC148500F8FC82 /* Reachability */,
 				6C18468C1BC6A2A600C7AF5D /* AFNetworking */,
@@ -249,13 +249,13 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
-		6C60E5C21BDFA74200540A61 /* Images */ = {
+		6C662F4E1BE3EB0000510B98 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				6C60E5C51BDFA80B00540A61 /* BrownGradientBackground.png */,
-				6C60E5C31BDFA75500540A61 /* YLetterLogo.png */,
+				6C662F4F1BE3EB0000510B98 /* BrownGradientBackground.png */,
+				6C662F501BE3EB0000510B98 /* YLetterLogo.png */,
 			);
-			name = Images;
+			path = Images;
 			sourceTree = "<group>";
 		};
 		6C8FAF791BDECC5B000A21F7 /* Texts */ = {
@@ -332,10 +332,10 @@
 				6C8FAF821BDED64A000A21F7 /* Candy.txt in Resources */,
 				6C8FAF7E1BDECC5B000A21F7 /* Le Petit Prince.txt in Resources */,
 				6C1F458E1BC664EB006E548B /* LaunchScreen.storyboard in Resources */,
+				6C662F521BE3EB0000510B98 /* YLetterLogo.png in Resources */,
 				6C8FAF831BDED64A000A21F7 /* Доктор Живаго.txt in Resources */,
+				6C662F511BE3EB0000510B98 /* BrownGradientBackground.png in Resources */,
 				6C8FAF7D1BDECC5B000A21F7 /* Great Expectations.txt in Resources */,
-				6C60E5C61BDFA80B00540A61 /* BrownGradientBackground.png in Resources */,
-				6C60E5C41BDFA75500540A61 /* YLetterLogo.png in Resources */,
 				6C1F458B1BC664EB006E548B /* Assets.xcassets in Resources */,
 				6C1F45891BC664EB006E548B /* Main.storyboard in Resources */,
 			);
@@ -486,7 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YaTranslate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nikita.makarov.YaTranslate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,7 +498,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YaTranslate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nikita.makarov.YaTranslate;
 				PRODUCT_NAME = "$(TARGET_NAME)";

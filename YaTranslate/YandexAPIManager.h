@@ -20,7 +20,6 @@
 - (void)translateText:(NSString *)text fromLanguage:(NSString *)fromLang toLanguage:(NSString *)toLang;
 - (void)supportedLanguagesWithBlockOnSuccess:(void(^)(id arg))success onFailure:(void(^)(void))failure;
 - (void)checkInternetConnectionWithBlockOnSuccess:(void(^)(void))success onFailure:(void(^)(void))failure;
-- (NSArray *)supportedLanguages;
 
 @end
 
