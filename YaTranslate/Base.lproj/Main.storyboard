@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="h0r-g0-wTC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="h0r-g0-wTC">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -10,9 +11,14 @@
             <objects>
                 <navigationController id="h0r-g0-wTC" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Up-8a-Jzr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="7Up-8a-Jzr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.52549019607843139" green="0.41176470588235292" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NX9-YN-u76"/>
@@ -21,6 +27,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1u-xu-Rtg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1236" y="-459"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bWu-gj-Jha">
+            <objects>
+                <navigationController id="wsv-BV-GSQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6sT-kD-mII">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xkI-dR-jGD" kind="relationship" relationship="rootViewController" id="lUY-8B-LHO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aMc-LY-zYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373" y="-790"/>
         </scene>
         <!--Select text-->
         <scene sceneID="P8C-YL-dNH">
@@ -64,23 +86,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgU-zG-Avy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="373" y="-1240"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="FqN-Nh-z6h">
-            <objects>
-                <navigationController storyboardIdentifier="TextSelectionScreen" id="tiq-qQ-aaw" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aGs-nZ-JqD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="xkI-dR-jGD" kind="relationship" relationship="rootViewController" id="oj7-vb-gTb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qUJ-r7-WKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-447" y="-1240"/>
+            <point key="canvasLocation" x="1171" y="-790"/>
         </scene>
         <!--YaTranslate-->
         <scene sceneID="tne-QT-ifu">
@@ -96,9 +102,6 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECL-n3-32y">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <string key="text">My father's family name being Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit than Pip. So, I called myself Pip, and came to be called Pip.
-I give Pirrip as my father's family name, on the authority of his tombstone and my sister,—Mrs. Joe Gargery, who married the blacksmith. As I never saw my father or my mother, and never saw any likeness of either of them (for their days were long before the days of photographs), my first fancies regarding what they were like were unreasonably derived from their tombstones. The shape of the letters on my father's, gave me an odd idea that he was a square, stout, dark man, with curly black hair. From the character and turn of the inscription, "Also Georgiana Wife of the Above," I drew a childish conclusion that my mother was freckled and sickly. To five little stone lozenges, each about a foot and a half long, which were arranged in a neat row beside their grave, and were sacred to the memory of five little brothers of mine,—who gave up trying to get a living, exceedingly early in that universal struggle,—I am indebted for a belief I religiously entertained that they had all been born on their backs with their hands in their trousers-pockets, and had never taken them out in this state of existence.
-Ours was the marsh country, down by the river, within, as the river wound, twenty miles of the sea. My first most vivid and broad impression of the identity of things seems to me to have been gained on a memorable raw afternoon towards evening. At such a time I found out for certain that this bleak place overgrown with nettles was the churchyard; and that Philip Pirrip, late of this parish, and also Georgiana wife of the above, were dead and buried; and that Alexander, Bartholomew, Abraham, Tobias, and Roger, infant children of the aforesaid, were also dead and buried; and that the dark flat wilderness beyond the churchyard, intersected with dikes and mounds and gates, with scattered cattle feeding on it, was the marshes; and that the low leaden line beyond was the river; and that the distant savage lair from which the wind was rushing was the sea; and that the small bundle of shivers growing afraid of it all and beginning to cry, was Pip.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -115,21 +118,33 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                         <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="vRC-iA-uk6">
                             <connections>
                                 <action selector="selectTextButtonPressed:" destination="BYZ-38-t0r" id="jdg-N5-iZ4"/>
+                                <segue destination="wsv-BV-GSQ" kind="popoverPresentation" identifier="SelectTextSegue" popoverAnchorBarButtonItem="vRC-iA-uk6" id="UnY-MC-mAl">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="textView" destination="ECL-n3-32y" id="wWy-b7-2iD"/>
+                        <outlet property="translateButton" destination="bBv-LG-Cav" id="giu-Gc-cdO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bBv-LG-Cav">
+                    <rect key="frame" x="0.0" y="0.0" width="109" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="TranslateButton"/>
+                    <connections>
+                        <segue destination="ib7-Cs-Gbk" kind="show" identifier="TranslateSegue" id="65U-do-S0o"/>
+                    </connections>
+                </button>
             </objects>
             <point key="canvasLocation" x="-447" y="-459"/>
         </scene>
         <!--Translate View Controller-->
         <scene sceneID="IFG-sA-VB6">
             <objects>
-                <viewController storyboardIdentifier="TranslationScreen" id="ib7-Cs-Gbk" customClass="TranslateViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TranslateView" id="ib7-Cs-Gbk" customClass="TranslateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KrC-gi-pj9"/>
                         <viewControllerLayoutGuide type="bottom" id="HXy-5D-Buh"/>
@@ -143,7 +158,6 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="xuJ-kE-W14"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -183,16 +197,6 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                                 </constraints>
                                 <state key="normal" title="&gt;"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjP-Zb-DYG">
-                                <rect key="frame" x="156" y="23" width="120" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="aoG-TE-S5Z"/>
-                                </constraints>
-                                <state key="normal" title="From"/>
-                                <connections>
-                                    <action selector="selectLanguageButtonPressed:" destination="ib7-Cs-Gbk" eventType="touchUpInside" id="lfn-Vo-lce"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xri-V8-REy">
                                 <rect key="frame" x="324" y="23" width="120" height="30"/>
                                 <constraints>
@@ -201,7 +205,9 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                                 </constraints>
                                 <state key="normal" title="To"/>
                                 <connections>
-                                    <action selector="selectLanguageButtonPressed:" destination="ib7-Cs-Gbk" eventType="touchUpInside" id="khe-kx-qUE"/>
+                                    <segue destination="fz0-st-n7L" kind="popoverPresentation" identifier="SelectToLanguageSegue" popoverAnchorView="Xri-V8-REy" id="7uG-FZ-qvR">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ina-6X-z3U">
@@ -209,7 +215,6 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="MWX-XU-SaL"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="default">
@@ -218,6 +223,21 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                                     </mask>
                                 </variation>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjP-Zb-DYG">
+                                <rect key="frame" x="156" y="23" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="aoG-TE-S5Z"/>
+                                </constraints>
+                                <state key="normal" title="From"/>
+                                <connections>
+                                    <segue destination="fz0-st-n7L" kind="popoverPresentation" identifier="SelectFromLanguageSegue" popoverAnchorView="GjP-Zb-DYG" id="Ukq-0C-1Er">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="AYb-Re-OZ9">
+                                <rect key="frame" x="290" y="393" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -236,7 +256,9 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                             <constraint firstItem="ina-6X-z3U" firstAttribute="top" secondItem="TVL-cI-dkg" secondAttribute="bottom" constant="8" id="c3H-Ff-gDn"/>
                             <constraint firstItem="Xri-V8-REy" firstAttribute="trailing" secondItem="3J4-ta-BWh" secondAttribute="trailingMargin" id="cK7-fc-FHz"/>
                             <constraint firstItem="fDg-PJ-IfM" firstAttribute="top" secondItem="ipL-XO-dsu" secondAttribute="bottom" constant="8" id="fhE-pn-N2Z"/>
+                            <constraint firstItem="AYb-Re-OZ9" firstAttribute="centerY" secondItem="ina-6X-z3U" secondAttribute="centerY" id="glh-cz-FKG"/>
                             <constraint firstItem="TVL-cI-dkg" firstAttribute="trailing" secondItem="3J4-ta-BWh" secondAttribute="trailingMargin" id="hYF-nb-g0W"/>
+                            <constraint firstItem="AYb-Re-OZ9" firstAttribute="centerX" secondItem="ina-6X-z3U" secondAttribute="centerX" id="hjL-7M-hwU"/>
                             <constraint firstItem="TVL-cI-dkg" firstAttribute="leading" secondItem="3J4-ta-BWh" secondAttribute="leadingMargin" id="msr-ZL-Bfe"/>
                             <constraint firstItem="ina-6X-z3U" firstAttribute="leading" secondItem="3J4-ta-BWh" secondAttribute="leadingMargin" id="nTf-kd-teM"/>
                             <constraint firstItem="fDg-PJ-IfM" firstAttribute="trailing" secondItem="3J4-ta-BWh" secondAttribute="trailingMargin" id="nZX-Ty-lZw"/>
@@ -251,18 +273,19 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="AYb-Re-OZ9" id="Ub1-Ti-JzO"/>
                         <outlet property="arrowButton" destination="hp4-CT-Swy" id="gTg-yw-df4"/>
-                        <outlet property="fromLangButton" destination="GjP-Zb-DYG" id="mrw-Lc-uw4"/>
+                        <outlet property="fromLanguageButton" destination="GjP-Zb-DYG" id="2qZ-ML-eRk"/>
                         <outlet property="originalTextView" destination="fDg-PJ-IfM" id="eNj-Vo-XAG"/>
-                        <outlet property="toLangButton" destination="Xri-V8-REy" id="aqC-m2-iip"/>
+                        <outlet property="toLanguageButton" destination="Xri-V8-REy" id="Uo1-OK-erM"/>
                         <outlet property="translatedTextView" destination="ina-6X-z3U" id="HMI-yr-YRh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VBx-Xb-3zi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="373" y="-459"/>
+            <point key="canvasLocation" x="373" y="-101"/>
         </scene>
-        <!--Language Selection View Controller-->
+        <!--Select language-->
         <scene sceneID="HPX-uq-elT">
             <objects>
                 <tableViewController storyboardIdentifier="LanguageSelectionScreen" id="1zb-XB-t4n" customClass="LanguageSelectionViewController" sceneMemberID="viewController">
@@ -285,10 +308,36 @@ Ours was the marsh country, down by the river, within, as the river wound, twent
                             <outlet property="delegate" destination="1zb-XB-t4n" id="PNV-wK-MHu"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Select language" id="GZy-Pn-etm">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="heY-mb-5Bc">
+                            <connections>
+                                <action selector="actionDoneButtonPressed:" destination="1zb-XB-t4n" id="NPC-cr-YPa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dis-Jh-PsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1183" y="-459"/>
+            <point key="canvasLocation" x="1969" y="-101"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jkW-Kj-Nkz">
+            <objects>
+                <navigationController id="fz0-st-n7L" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KoC-Tn-Yy4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1zb-XB-t4n" kind="relationship" relationship="rootViewController" id="vcT-2e-NWe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shL-O1-nkD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1171" y="-101"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7uG-FZ-qvR"/>
+    </inferredMetricsTieBreakers>
 </document>

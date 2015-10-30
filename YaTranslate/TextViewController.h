@@ -11,7 +11,6 @@
 @interface TextViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
-
-- (IBAction)selectTextButtonPressed:(UIBarButtonItem *)sender;
+@property (strong, nonatomic) IBOutlet UIButton *translateButton;
 
 @end

@@ -8,17 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol LanguageSelectionDelegate <NSObject>
-
-@required
-
-- (void)updateLanguageTo:(NSString *)language forSender:(id)sender;
-
-@end
+@protocol LanguageSelectionDelegate;
 
 @interface LanguageSelectionViewController : UITableViewController
 
 @property (weak, nonatomic) id <LanguageSelectionDelegate> delegate;
 @property (weak, nonatomic) id sender;
+
+- (IBAction)actionDoneButtonPressed:(UIBarButtonItem *)sender;
+
+@end
+
+
+@protocol LanguageSelectionDelegate <NSObject>
+
+@required
+
+- (void)languageSelectionView:(LanguageSelectionViewController *)languageSelectionView didChangeLanguageTo:(NSString *)language forSender:(id)sender;
 
 @end

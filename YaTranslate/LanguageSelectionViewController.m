@@ -7,6 +7,7 @@
 //
 
 #import "LanguageSelectionViewController.h"
+#import "UIAlertController+ErrorAlert.h"
 #import "YandexAPIManager.h"
 
 @interface LanguageSelectionViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -21,22 +22,77 @@
 {
     [super viewDidLoad];
     
-    YandexAPIManager *manager = [YandexAPIManager sharedManager];
+    self.languages = [NSArray array];
     
-    NSMutableArray *languages = [[manager supportedLanguages] mutableCopy];
-    [languages insertObject:@"Авто" atIndex:0];
+    //YandexAPIManager *manager = [YandexAPIManager sharedManager];
     
-    [languages sortUsingComparator:^NSComparisonResult(NSString *lang1, NSString *lang2) {
-        return [lang1 compare:lang2];
+    LanguageSelectionViewController * __weak weakSelf = self;
+    
+    [[YandexAPIManager sharedManager] supportedLanguagesWithBlockOnSuccess:^(NSArray *languages) {
+        weakSelf.languages = languages;
+        [weakSelf sortLanguages];
+        [weakSelf insertAutodetectLanguage];
+        [weakSelf.tableView reloadData];
+    } onFailure:^{
+        UIAlertController *errorAlert = [UIAlertController errorAlertWithMessage:@"Can't load languages"];
+        [weakSelf presentViewController:errorAlert animated:YES completion:nil];
+        NSLog(@"can't load languages");
     }];
     
-    self.languages = languages;    
+    
+    /*
+    if (!manager.isLanguagesLoaded) {
+        LanguageSelectionViewController * __weak weakSelf = self;
+        [manager supportedLanguagesWithBlockOnSuccess:^(NSArray *languages) {
+            weakSelf.languages = languages;
+            [weakSelf sortLanguages];
+            [weakSelf insertAutodetectLanguage];
+            [weakSelf.tableView reloadData];
+        } onFailure:^{
+            NSLog(@"can't load languages");
+        }];
+    } else {
+        self.languages = [manager supportedLanguages];
+        [self sortLanguages];
+        [self insertAutodetectLanguage];
+    }
+     */
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
 }
+
+- (void)dealloc
+{
+    NSLog(@"%s", __FUNCTION__);
+}
+
+
+
+#pragma mark - Actions
+
+- (void)insertAutodetectLanguage
+{
+    NSMutableArray *languages = [self.languages mutableCopy];
+    [languages insertObject:@"Auto" atIndex:0];
+    self.languages = languages;
+}
+
+- (void)sortLanguages
+{
+    self.languages = [self.languages sortedArrayUsingComparator:^NSComparisonResult(NSString *lang1, NSString *lang2) {
+        return [lang1 compare:lang2];
+    }];
+}
+
+- (IBAction)actionDoneButtonPressed:(UIBarButtonItem *)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 
 #pragma mark - UITableViewDataSource
 
@@ -60,6 +116,8 @@
     return cell;
 }
 
+
+
 #pragma mark - UITableViewDelegate
     
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -67,10 +125,12 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+
+    NSString *language = cell.textLabel.text;
     
-    [self.delegate updateLanguageTo:cell.textLabel.text forSender:self.sender];
+    [self.delegate languageSelectionView:self didChangeLanguageTo:language forSender:self.sender];
     
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -8,18 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol TextSelectionDelegate <NSObject>
-
-@required
-
-- (void)setNewText:(NSString *)text;
-
-@end
+@protocol TextSelectionDelegate;
 
 @interface TextSelectionViewController : UITableViewController
 
 @property (weak, nonatomic) id <TextSelectionDelegate> delegate;
 
 - (IBAction)doneButtonPressed:(UIBarButtonItem *)sender;
+
+@end
+
+
+@protocol TextSelectionDelegate <NSObject>
+
+@required
+
+- (void)textSelectionView:(TextSelectionViewController *)textSelectionView didChangeTextToTextNamed:(NSString *)textName contents:(NSString *)text;
 
 @end

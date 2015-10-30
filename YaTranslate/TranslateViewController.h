@@ -17,9 +17,9 @@
 @property (weak, nonatomic) IBOutlet UITextView *translatedTextView;
 
 @property (weak, nonatomic) IBOutlet UIButton *arrowButton;
-@property (weak, nonatomic) IBOutlet UIButton *fromLangButton;
-@property (weak, nonatomic) IBOutlet UIButton *toLangButton;
+@property (weak, nonatomic) IBOutlet UIButton *fromLanguageButton;
+@property (weak, nonatomic) IBOutlet UIButton *toLanguageButton;
 
-- (IBAction)selectLanguageButtonPressed:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
