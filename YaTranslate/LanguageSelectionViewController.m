@@ -24,8 +24,6 @@
     
     self.languages = [NSArray array];
     
-    //YandexAPIManager *manager = [YandexAPIManager sharedManager];
-    
     LanguageSelectionViewController * __weak weakSelf = self;
     
     [[YandexAPIManager sharedManager] supportedLanguagesWithBlockOnSuccess:^(NSArray *languages) {
@@ -38,25 +36,6 @@
         [weakSelf presentViewController:errorAlert animated:YES completion:nil];
         NSLog(@"can't load languages");
     }];
-    
-    
-    /*
-    if (!manager.isLanguagesLoaded) {
-        LanguageSelectionViewController * __weak weakSelf = self;
-        [manager supportedLanguagesWithBlockOnSuccess:^(NSArray *languages) {
-            weakSelf.languages = languages;
-            [weakSelf sortLanguages];
-            [weakSelf insertAutodetectLanguage];
-            [weakSelf.tableView reloadData];
-        } onFailure:^{
-            NSLog(@"can't load languages");
-        }];
-    } else {
-        self.languages = [manager supportedLanguages];
-        [self sortLanguages];
-        [self insertAutodetectLanguage];
-    }
-     */
 }
 
 - (void)didReceiveMemoryWarning
