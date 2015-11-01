@@ -161,7 +161,7 @@ static NSString * const defaultLanguageCode = @"en";
 - (void)supportedLanguagesWithBlockOnSuccess:(void(^)(id arg))success onFailure:(void(^)(void))failure
 {
     if ([self isLanguagesLoaded]) {
-        success([self.languages allValues]);
+        success([self supportedLanguages]);
     } else {
         [self loadSupportedLanguagesWithBlockOnSuccess:success onFailure:failure];
     }
